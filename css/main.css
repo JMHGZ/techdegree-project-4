@@ -3,17 +3,8 @@
   box-sizing: border-box;
 }
 
-img {
-  padding: 10px;
-  margin: 10px;
-}
-
-text {
-  width: 40%;
-}
-
 input {
-  width: 39%;
+  width: 45%;
   height: 40px;
   border-radius: .35em;
   border: 1.5px solid #DCDCDC;
@@ -32,4 +23,14 @@ input {
   justify-content: center;
   padding: 20px;
   flex-wrap: wrap;
+}
+
+.gallery img {
+  padding: 20px;
+}
+
+::placeholder {
+  color: #c0c0c0;
+  padding-left: 10px;
+  font-size: 14px;
 }
