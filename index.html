@@ -10,70 +10,70 @@
 </head>
 <body>
 
-<div class="page">
+<div id="page">
 
   <div class="search">
-    <input type="text" name="searchbox" placeholder="Search" data-list=".gallery">
+    <input type="text" name="searchbox" id="search_field" placeholder="Search" data-list=".gallery">
   </div>
-
 
   <div class="gallery">
 
-      <a href="photos/01.jpg" data-lightbox="places" data-title="I love hay bales. Took this snap on a drive through the countryside past some straw fields.">
+      <a href="photos/01.jpg" data-lightbox="places" data-title="I love hay bales. Took this snap on a drive through the countryside past some straw fields." data-keywords="I love hay bales. Took this snap on a drive through the countryside past some straw fields.">
       <img src="photos/thumbnails/t01.jpg" alt="Hay Bales"></a>
 
-      <a href="photos/02.jpg" data-lightbox="places" data-title="The lake was so calm today. We had a great view of the snow on the mountains from here.">
+      <a href="photos/02.jpg" data-lightbox="places" data-title="The lake was so calm today. We had a great view of the snow on the mountains from here." data-keywords="The lake was so calm today. We had a great view of the snow on the mountains from here.">
       <img src="photos/thumbnails/t02.jpg" alt="Lake"></a>
 
-      <a href="photos/03.jpg" data-lightbox="places" data-title="I hiked to the top of the mountain and got this picture of the canyon and trees below.">
+      <a href="photos/03.jpg" data-lightbox="places" data-title="I hiked to the top of the mountain and got this picture of the canyon and trees below." data-keywords="I hiked to the top of the mountain and got this picture of the canyon and trees below.">
       <img src="photos/thumbnails/t03.jpg" alt="Canyon"></a>
 
-      <a href="photos/04.jpg" data-lightbox="places" data-title="It was amazing to see an iceberg up close, it was so cold but didn’t snow today. ">
+      <a href="photos/04.jpg" data-lightbox="places" data-title="It was amazing to see an iceberg up close, it was so cold but didn’t snow today." data-keywords="It was amazing to see an iceberg up close, it was so cold but didn’t snow today.">
       <img src="photos/thumbnails/t04.jpg" alt="Iceberg"></a>
 
-      <a href="photos/05.jpg" data-lightbox="places" data-title="The red cliffs were beautiful. It was really hot in the desert but we did a lot of walking through the canyons.">
+      <a href="photos/05.jpg" data-lightbox="places" data-title="The red cliffs were beautiful. It was really hot in the desert but we did a lot of walking through the canyons." data-keywords="The red cliffs were beautiful. It was really hot in the desert but we did a lot of walking through the canyons.">
       <img src="photos/thumbnails/t05.jpg" alt="Desert"></a>
 
-      <a href="photos/06.jpg" data-lightbox="places" data-title="Fall is coming, I love when the leaves on the trees start to change color.">
+      <a href="photos/06.jpg" data-lightbox="places" data-title="Fall is coming, I love when the leaves on the trees start to change color." data-keywords="Fall is coming, I love when the leaves on the trees start to change color.">
       <img src="photos/thumbnails/t06.jpg" alt="Fall"></a>
 
-      <a href="photos/07.jpg" data-lightbox="places" data-title="I drove past this plantation yesterday, everything is so green!">
+      <a href="photos/07.jpg" data-lightbox="places" data-title="I drove past this plantation yesterday, everything is so green!" data-keywords="I drove past this plantation yesterday, everything is so green!">
       <img src="photos/thumbnails/t07.jpg" alt="Plantation"></a>
 
-      <a href="photos/08.jpg" data-lightbox="places" data-title="My summer vacation to the Oregon Coast. I love the sandy dunes!">
+      <a href="photos/08.jpg" data-lightbox="places" data-title="My summer vacation to the Oregon Coast. I love the sandy dunes!" data-keywords="My summer vacation to the Oregon Coast. I love the sandy dunes!">
       <img src="photos/thumbnails/t08.jpg" alt="Dunes"></a>
 
-      <a href="photos/09.jpg" data-lightbox="places" data-title="We enjoyed a quiet stroll down this countryside lane. ">
+      <a href="photos/09.jpg" data-lightbox="places" data-title="We enjoyed a quiet stroll down this countryside lane." data-keywords="We enjoyed a quiet stroll down this countryside lane.">
       <img src="photos/thumbnails/t09.jpg" alt="Countryside Lane"></a>
 
-      <a href="photos/10.jpg" data-lightbox="places" data-title="Sunset at the coast! The sky turned a lovely shade of orange.">
+      <a href="photos/10.jpg" data-lightbox="places" data-title="Sunset at the coast! The sky turned a lovely shade of orange." data-keywords="Sunset at the coast! The sky turned a lovely shade of orange.">
       <img src="photos/thumbnails/t10.jpg" alt="Sunset"></a>
 
-      <a href="photos/11.jpg" data-lightbox="places" data-title="I did a tour of a cave today and the view of the landscape below was breathtaking.">
+      <a href="photos/11.jpg" data-lightbox="places" data-title="I did a tour of a cave today and the view of the landscape below was breathtaking." data-keywords="I did a tour of a cave today and the view of the landscape below was breathtaking.">
       <img src="photos/thumbnails/t11.jpg" alt="Cave"></a>
 
-      <a href="photos/12.jpg" data-lightbox="places" data-title="I walked through this meadow of bluebells and got a good view of the snow on the mountain before the fog came in.">
+      <a href="photos/12.jpg" data-lightbox="places" data-title="I walked through this meadow of bluebells and got a good view of the snow on the mountain before the fog came in." data-keywords="I walked through this meadow of bluebells and got a good view of the snow on the mountain before the fog came in.">
       <img src="photos/thumbnails/t12.jpg" alt="Bluebells"></a>
   </div>
 </div>
 
+
     <script src="js/jquery-1.11.2.min.js"></script>
     <script src="lightbox/js/lightbox.min.js"></script>
-    <script src="HideSeek-master/jquery.hideseek.min.js">
-    </script>
-
-    <script>
-        lightbox.option({
-          'wrapAround': true
-        });
-    </script>
+    <script src="HideSeek-master/jquery.hideseek.min.js"></script>
 
     <script>
       $(document).ready(function() {
-        $('.search').hideseek();
+        $('#search_field').hideseek({
+          attribute: 'data-keywords'
+        });
       });
     </script>
 
+    <script>
+    lightbox.option({
+      'wrapAround': true
+    });
+    </script>
 
 </body>
 </html>
